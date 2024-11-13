@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Interactive Canvas</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div id="container">
+        <canvas id="canvas"></canvas>
+        <div id="panel">
+            <!-- Category buttons -->
+            <div id="category-buttons">
+                <button class="category-button" data-category="tools">Tools & Icons</button>
+                <button class="category-button" data-category="utilities">Utilities</button>
+                <button class="category-button" data-category="help">Help</button>
+            </div>
+            <!-- Categories -->
+            <div id="categories">
+                <!-- Tools and Icons category -->
+                <div class="category" id="tools">
+                    <h3>Tools</h3>
+                    <button id="select-tool">Select</button>
+                    <div id="selection-filters">
+                        <label><input type="checkbox" id="select-icons" checked> Select Icons</label>
+                        <label><input type="checkbox" id="select-lines" checked> Select Lines</label>
+                    </div>
+                    <button id="draw-tool">Draw</button>
+                    <div>
+                        <label for="brush-size">Brush Size:</label>
+                        <input type="range" id="brush-size" min="1" max="50" value="5">
+                    </div>
+                    <div>
+                        <label for="color-picker">Color:</label>
+                        <input type="color" id="color-picker" value="#ffffff">
+                    </div>
+                    <button id="pan-tool">Pan</button>
+                    <div>
+                        <label for="zoom-slider">Zoom:</label>
+                        <input type="range" id="zoom-slider" min="10" max="1000" value="100">
+                    </div>
+                    <button id="clear-canvas">Clear All</button>
+
+                    <h3>Icons</h3>
+                    <input type="file" id="icon-upload" accept="image/*" multiple>
+                    <div>
+                        <label for="icon-max-size">Max Icon Size (px):</label>
+                        <input type="number" id="icon-max-size" min="1" value="100">
+                    </div>
+                    <div id="icon-list"></div>
+                </div>
+                <!-- Utilities Category -->
+                <div class="category" id="utilities">
+                    <h3>Utilities</h3>
+                    <button id="set-background">Set Background Image</button>
+                    <button id="export-png">Export PNG</button>
+                    <button id="export-pdf">Export PDF</button>
+                    <button id="save-progress">Save Progress</button>
+                    <button id="load-progress">Load Progress</button>
+                    <div>
+                        <label for="theme-toggle">Dark Theme:</label>
+                        <input type="checkbox" id="theme-toggle">
+                    </div>
+                </div>
+                <!-- Help Category -->
+                <div class="category" id="help">
+                    <h3>Help</h3>
+                    <p>Controls:</p>
+                    <ul>
+                        <li>Select tools from the Tools & Icons category.</li>
+                        <li>Use the Select tool to select and manipulate objects.</li>
+                        <li>Use the selection filters to choose what types of objects are selectable.</li>
+                        <li>Use the Draw tool to draw on the canvas.</li>
+                        <li>Adjust brush size and color using the provided controls.</li>
+                        <li>Press 'x' to delete the selected object.</li>
+                        <li>Right-click to cancel the current action.</li>
+                        <li>Use Ctrl+Z to undo the last action.</li>
+                        <li>Use Ctrl+Y to redo the last undone action.</li>
+                        <li>Zoom in and out using the mouse wheel.</li>
+                        <li>Pan the canvas by holding the middle mouse button and moving the mouse.</li>
+                        <li>Use the Clear All button to remove all objects from the canvas.</li>
+                        <li>Set a background image from the Utilities category.</li>
+                        <li>Toggle Dark Theme from the Utilities category.</li>
+                        <li>Set the Max Icon Size in the Icons section to cap icon dimensions.</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <!-- Libraries -->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/fabric.js/5.2.4/fabric.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+        <script src="script.js"></script>
+    </div>
+</body>
+</html>
+

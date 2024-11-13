@@ -1,0 +1,140 @@
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: #121212;
+    color: #ffffff;
+}
+
+#container {
+    display: flex;
+    height: 100vh;
+}
+
+#canvas {
+    flex: 1;
+    border: 1px solid #ccc;
+    cursor: crosshair;
+}
+
+#panel {
+    width: 250px;
+    border-left: 1px solid #ccc;
+    box-sizing: border-box;
+    overflow-y: auto;
+    background-color: #1e1e1e;
+    padding: 10px;
+}
+
+#category-buttons {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 10px;
+}
+
+.category-button {
+    margin-bottom: 5px;
+    padding: 10px;
+    background-color: #2e2e2e;
+    border: none;
+    cursor: pointer;
+    text-align: left;
+    width: 100%;
+    box-sizing: border-box;
+    font-size: 16px;
+    color: #ffffff;
+}
+
+.category-button:hover {
+    background-color: #3e3e3e;
+}
+
+#categories .category {
+    display: none;
+}
+
+#categories .category.active {
+    display: block;
+}
+
+.category h3 {
+    margin-top: 0;
+    color: #ffffff;
+}
+
+#selection-filters {
+    margin-top: 5px;
+}
+
+#selection-filters label {
+    display: block;
+    margin-top: 5px;
+    color: #ffffff;
+}
+
+#selection-filters input[type="checkbox"] {
+    margin-right: 5px;
+}
+
+#icon-list img {
+    width: 50px;
+    height: 50px;
+    cursor: pointer;
+    margin: 5px;
+}
+
+.custom-cursor {
+    position: absolute;
+    pointer-events: none;
+    border: 1px solid #ffffff;
+    border-radius: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 1000;
+}
+
+.floating-icon {
+    position: absolute;
+    pointer-events: none;
+    opacity: 0.5;
+    z-index: 2000;
+}
+
+input[type="range"],
+input[type="number"] {
+    width: 100%;
+}
+
+label {
+    display: block;
+    margin-top: 5px;
+    color: #ffffff;
+}
+
+input[type="color"] {
+    width: 100%;
+    padding: 0;
+    border: none;
+    background-color: transparent;
+}
+
+input[type="checkbox"] {
+    margin-left: 5px;
+}
+
+button {
+    background-color: #2e2e2e;
+    color: #ffffff;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+    width: 100%;
+    margin-top: 5px;
+}
+
+button:hover {
+    background-color: #3e3e3e;
+}
+
+input[type="file"] {
+    color: #ffffff;
+}
+
